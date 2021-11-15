@@ -15,7 +15,14 @@ phases:
       - echo ${CODEBUILD_WEBHOOK_EVENT}
       - echo ${CODEBUILD_WEBHOOK_HEAD_REF}
       - echo ${CODEBUILD_WEBHOOK_TRIGGER}
+      - echo $action 
       - terraform init
       - terraform plan
+      - |
+        if ${CODEBUILD_WEBHOOK_TRIGGER} = 'refs/heads/main'; then
+          echo 'trigger is main'
+        fi
+        terraform plan > resultplan.json
+        cat resultplan.json
       - terraform apply -auto-approve
       - echo build done!
