@@ -3,7 +3,11 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Entered the install phase...
+    - curl -s -qL -o terraform_install.zip https://releases.hashicorp.com/terraform/1.0.11/terraform_1.0.11_linux_amd64.zip
+    - unzip terraform_install.zip -d /usr/bin/
+    - chmod +x /usr/bin/terraform
+    finally:
+      - terraform --version
   build:
     commands:
       - aws s3 ls
