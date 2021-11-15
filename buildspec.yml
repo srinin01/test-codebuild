@@ -12,5 +12,5 @@ phases:
     commands:
       - terraform init
       - terraform plan
-      - aws s3 ls
+      - terraform apply
       - echo build done!
