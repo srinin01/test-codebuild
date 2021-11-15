@@ -15,7 +15,7 @@ phases:
       - echo ${CODEBUILD_WEBHOOK_EVENT}
       - echo ${CODEBUILD_WEBHOOK_HEAD_REF}
       - echo ${CODEBUILD_WEBHOOK_TRIGGER}
-      - echo ${action} 
+      - eprintenv
       - terraform init
       - terraform plan
       - |
@@ -26,7 +26,7 @@ phases:
           echo push push
         if ${CODEBUILD_WEBHOOK_EVENT} = 'PULL_REQUEST_CREATED'; then
           echo PR PR
-        terraform plan > resultplan.json
-        cat resultplan.json
+        resultplan = terraform plan
+        echo $resultplan
       - terraform apply -auto-approve
       - echo build done!
