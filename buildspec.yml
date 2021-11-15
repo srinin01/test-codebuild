@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+  build:
+    commands:
+      - aws s3 ls
+      - echo build done!
