@@ -27,7 +27,7 @@ phases:
         if [ "$CODEBUILD_WEBHOOK_EVENT" = 'PULL_REQUEST_CREATED' ]; then
           echo PR PR
         fi
-        resultplan=terraform plan
+        resultplan=$(terraform plan)
         echo $resultplan
       - terraform apply -auto-approve
       - echo build done!
