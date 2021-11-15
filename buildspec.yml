@@ -10,5 +10,6 @@ phases:
       - terraform --version
   build:
     commands:
+      - terraform plan
       - aws s3 ls
       - echo build done!
