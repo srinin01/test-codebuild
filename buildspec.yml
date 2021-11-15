@@ -10,6 +10,7 @@ phases:
       - terraform --version
   build:
     commands:
+      - echo ${CODEBUILD_WEBHOOK_TRIGGER##*/}
       - terraform init
       - terraform plan
       - terraform apply -auto-approve
