@@ -11,6 +11,10 @@ phases:
   build:
     commands:
       - echo ${CODEBUILD_WEBHOOK_TRIGGER##*/}
+      - echo ${CODEBUILD_BUILD_ARN}
+      - echo ${CODEBUILD_WEBHOOK_EVENT}
+      - echo ${CODEBUILD_WEBHOOK_HEAD_REF}
+      - echo ${CODEBUILD_WEBHOOK_TRIGGER}
       - terraform init
       - terraform plan
       - terraform apply -auto-approve
