@@ -11,8 +11,9 @@ phases:
   build:
     commands:
       - |
+        enter="\n"
         tinit=$(terraform init)
         tplan=$(terraform plan)
-        output="#### Terraform Initialization 🖌 $tinit"
+        output="#### Terraform Initialization 🖌 $enter$tinit"
       - echo $output
       - echo build done!
