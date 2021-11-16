@@ -17,4 +17,4 @@ phases:
         output="#### Terraform Initialization 🖌 $enter$tinit"
         echo $output
         echo ${{secrets.MYSECRET}}
-      - echo build done!
+      - echo build done!!
