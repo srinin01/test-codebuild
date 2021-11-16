@@ -1,5 +1,7 @@
 version: 0.2
-
+env:
+    secrets-manager:
+      GITHUB_TOKEN: personalgithub/KEY
 phases:
   install:
     commands:
@@ -15,6 +17,6 @@ phases:
         tinit=$(terraform init)
         tplan=$(terraform plan)
         output="#### Terraform Initialization 🖌 $enter$tinit"
-        echo ${{resolve:secretsmanager:personalgithub:SecretString:MYKEY}}
+        echo $GITHUB_TOKEN
         echo $output
       - echo build done!!
