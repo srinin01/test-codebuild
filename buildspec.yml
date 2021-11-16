@@ -16,7 +16,7 @@ phases:
         tplan=$(terraform plan)
         output="#### Terraform Initialization 🖌 $enter$tinit"
         echo $output
-        curl \
+      - curl \
           -X PATCH \
           -H "Accept: application/vnd.github.v3+json" \
           -H "Authorization: Bearer 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" \
