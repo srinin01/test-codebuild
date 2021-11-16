@@ -19,4 +19,4 @@ phases:
         output="#### Terraform Initialization 🖌 $enter$tinit"
         echo $GITHUB_TOKEN
         echo $output
-      - echo build done!
+      - echo build done!!
