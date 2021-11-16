@@ -1,7 +1,7 @@
 version: 0.2
 env:
     secrets-manager:
-      GITHUB_TOKEN: /personalgithub/MYKEY
+      GITHUB_TOKEN: personalgithub:MYKEY
   install:
     commands:
     - curl -s -qL -o terraform_install.zip https://releases.hashicorp.com/terraform/1.0.11/terraform_1.0.11_linux_amd64.zip
