@@ -13,6 +13,6 @@ phases:
       - |
         tinit=$(terraform init)
         tplan=$(terraform plan)
-        const output = `#### Terraform Initialization 🖌\`${tinit}\``
+        output = `#### Terraform Initialization 🖌\`${tinit}\``
       - echo $output
       - echo build done!
