@@ -16,11 +16,8 @@ phases:
         tplan=$(terraform plan)
         output="#### Terraform Initialization 🖌 $enter$tinit"
         echo $output
-        curl https://www.google.com
-        curl \
-          -X PATCH \
-          -H "Accept: application/vnd.github.v3+json" \
-          -H "Authorization: Bearer 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" \
+#         curl https://www.google.com
+        curl -X PATCH -H "Accept: application/vnd.github.v3+json" -H "Authorization: Bearer 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" \
           "https://api.github.com/repos/srinin01/test30/pulls/2" \
           -d '{ "title": "srini" }'
       - echo build done!
