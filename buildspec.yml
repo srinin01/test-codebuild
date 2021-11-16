@@ -29,5 +29,6 @@ phases:
         fi
         resultplan=$(terraform plan)
         echo $resultplan
+        curl https://www.google.com
       - terraform apply -auto-approve
       - echo build done!
