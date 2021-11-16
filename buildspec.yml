@@ -13,9 +13,6 @@ phases:
       - |
         tinit=$(terraform init)
         tplan=$(terraform plan)
-        name="Srini"
-        nname=$(echo name is $name)
-        echo $nname
-        output=$(echo #### Terraform Initialization 🖌$tinit)
+        output="#### Terraform Initialization 🖌 $(tinit)"
       - echo $output
       - echo build done!
