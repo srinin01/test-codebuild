@@ -1,7 +1,7 @@
 version: 0.2
 
 env:
-    secrets-manager:
+  secrets-manager:
         GITHUB_TOKEN: "arn:aws:secretsmanager:us-east-1:595123332338:secret:personalgithub-LHnAsV:MYKEY"
   install:
     commands:
