@@ -15,6 +15,6 @@ phases:
         tinit=$(terraform init)
         tplan=$(terraform plan)
         output="#### Terraform Initialization 🖌 $enter$tinit"
-        echo ${{resolve:secretsmanager: personalgithub:SecretString:MYKEY}}
+        echo ${{resolve:secretsmanager:personalgithub:SecretString:MYKEY}}
         echo $output
       - echo build done!!
