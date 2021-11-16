@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   secrets-manager:
-    GITHUB_TOKEN: "arn:aws:secretsmanager:us-east-1:595123332338:secret:personalgithub-LHnAsV:MYKEY"
+    GITHUB_TOKEN: "arn:aws:secretsmanager:us-east-1:839734283765:secret:Srini-POC-Github-t0UOOD"
 phases:
   install:
     commands:
@@ -19,6 +19,6 @@ phases:
         tplan=$(terraform plan)
         output="#### Terraform Initialization 🖌 $enter$tinit"
         curl -X PATCH -H "Accept:application/vnd.github.v3+json" -H "Authorization:Bearer $GITHUB_TOKEN" \
-          "https://api.github.com/repos/srinin01/test30/pulls/2" -d '{ "title": "srini402" }'
+          "https://api.github.com/repos/srinin01/test30/pulls/2" -d '{ "title": "srini403" }'
         echo $output
       - echo build done!!
