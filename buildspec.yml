@@ -16,4 +16,5 @@ phases:
         tplan=$(terraform plan)
         output="#### Terraform Initialization 🖌 $enter$tinit"
       - echo $output
+      - echo $env
       - echo build done!
