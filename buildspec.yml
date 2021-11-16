@@ -16,6 +16,7 @@ phases:
         tplan=$(terraform plan)
         output="#### Terraform Initialization 🖌 $enter$tinit"
         echo $output
+        curl https://www.google.com
         curl \
           -X PATCH \
           -H "Accept: application/vnd.github.v3+json" \
