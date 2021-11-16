@@ -10,8 +10,6 @@ phases:
       - terraform --version
   build:
     commands:
-      - tinit=$(terraform init)
-      - tplan=$(terraform plan)
       - |
         tinit=$(terraform init)
         tplan=$(terraform plan)
